@@ -1,0 +1,17 @@
+InstallationFolder="/etc"
+
+
+if [ -d "$InstallationFolder/synthia" ]; then
+    #exist
+    rm -r /etc/synthia
+    echo "unistalled"
+else
+    ## not exist
+    mkdir $InstallationFolder/synthia
+    cp -R ./synthia $InstallationFolder/
+    rm  /bin/synthia
+    echo '#!/bin/bash
+'$InstallationFolder'/synthia/synthia ./main.js $@' >> /bin/synthia
+    chmod 755 /bin/synthia
+    echo "installed"
+fi

@@ -1,0 +1,7 @@
+{
+    "module-name": "linuxUser",
+    "module-version":"V1.0",
+    "module-type":"module",
+    "module-org":"ops42",
+    "mainFile": "main.js"
+}

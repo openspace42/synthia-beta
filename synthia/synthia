@@ -1,0 +1,47 @@
+#!/bin/bash
+mFile=$1;
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+if [[ "$2" = "new" ]]; then
+rm ./main.js 2> /dev/null 
+echo 'var syntha = require("'${dir}'/bin/synthia");
+var SyntiaApp = (() => {
+	class SyntiaApp {
+
+		constructor() { }
+		
+		/**
+        * 
+        * @param {syntha} app 
+        */
+		init(app) {
+            
+		}
+
+		/**
+		 * 
+		 * @param {syntha} app 
+		 */
+		run(app) {
+
+            app.echo="Hello Word";
+            
+		}
+		
+		/**
+        * 
+        * @param {syntha} app 
+        */
+		quit(app) {
+			
+		}
+	}
+
+	return SyntiaApp;
+})()
+
+module.exports = SyntiaApp;
+' >> ./main.js
+else
+shift;
+nodejs --trace-warnings "${dir}/bin/run.js" $mFile $@
+fi

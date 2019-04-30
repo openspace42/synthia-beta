@@ -1,0 +1,36 @@
+{
+    "module-name": "",
+    "module-type":"module|worker|engine",
+    "_comment": "\"module-mount-on\":\"synthia\"",
+    "module-orgs": "ops42",
+    "module-author": {
+        "author-name": "Name",
+        "author-surname": "Surname",
+        "author-nic": "Nick",
+        "author-link": "",
+        "autonr-email": "",
+        "author-other": {
+            "param": "value"
+        }
+    },
+    "_module-author": "name->Name;surname->Surname",
+    "mainFile": "main.js",
+    "node-extend": [
+        {
+            "name":"",
+            "type":"",
+            "href":""
+        }
+    ],
+    "module-dep":[
+        {
+            "_comment":"a partial json"
+        }
+    ],
+    "module-other":{
+        "param":"value"
+    },
+    "descripton":"Desc",
+    "Doc_href":""
+    
+}
